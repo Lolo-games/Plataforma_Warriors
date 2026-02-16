@@ -37,8 +37,8 @@ def carregar_usuarios():
         return pd.read_csv(ARQ_USUARIOS)
     else:
         df = pd.DataFrame([{
-            "usuario": "admin",
-            "senha": "1234",
+            "usuario": "Admlolo",
+            "senha": "lolo10",
             "ativo": True,
             "tipo": "admin"
         }])
