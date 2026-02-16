@@ -36,8 +36,13 @@ def carregar_usuarios():
     if os.path.exists(ARQ_USUARIOS):
         return pd.read_csv(ARQ_USUARIOS)
     else:
-        df = pd.DataFrame(columns=["usuario","senha","ativo","tipo"])
-        df.to_csv(ARQ_USUARIOS,index=False)
+        df = pd.DataFrame([{
+            "usuario": "admin",
+            "senha": "1234",
+            "ativo": True,
+            "tipo": "admin"
+        }])
+        df.to_csv(ARQ_USUARIOS, index=False)
         return df
 
 def salvar_usuarios(df):
